@@ -1,0 +1,200 @@
+[gd_scene load_steps=7 format=3 uid="uid://di7de6akcqkne"]
+
+[ext_resource type="PackedScene" uid="uid://brdwl1085aox6" path="res://scenes/levels/level_1.tscn" id="1_oufh0"]
+[ext_resource type="Texture2D" uid="uid://dba8hpfuvmp3l" path="res://assets/bg/bg-mask.jpeg" id="2_ae7j8"]
+[ext_resource type="Texture2D" uid="uid://c6bang62hxhcq" path="res://assets/bg/Bgbuildingss.png" id="3_q30kq"]
+[ext_resource type="Texture2D" uid="uid://bc574van4q05v" path="res://assets/bg/Bgbuildingss2.png" id="4_rf8af"]
+[ext_resource type="Texture2D" uid="uid://vwgst613bjbm" path="res://assets/bg/homeBg.png" id="5_wedvm"]
+[ext_resource type="Texture2D" uid="uid://d0bcl62plou0d" path="res://assets/bg/homeBg2.png" id="6_6qxci"]
+
+[node name="LevelRoot" instance=ExtResource("1_oufh0")]
+
+[node name="background" parent="." index="0"]
+visible = false
+
+[node name="BgMask" type="Sprite2D" parent="." index="1"]
+position = Vector2(254.66667, 103.66667)
+texture = ExtResource("2_ae7j8")
+
+[node name="BgMask" type="Sprite2D" parent="BgMask" index="0"]
+position = Vector2(510.00006, -2)
+texture = ExtResource("2_ae7j8")
+
+[node name="BgMask" type="Sprite2D" parent="BgMask/BgMask" index="0"]
+position = Vector2(510.00006, -2)
+texture = ExtResource("2_ae7j8")
+
+[node name="BgMask2" type="Sprite2D" parent="BgMask/BgMask" index="1"]
+position = Vector2(1020.00024, -4)
+texture = ExtResource("2_ae7j8")
+
+[node name="BgMask" type="Sprite2D" parent="BgMask/BgMask/BgMask2" index="0"]
+position = Vector2(510.00006, -2)
+texture = ExtResource("2_ae7j8")
+
+[node name="BgMask" type="Sprite2D" parent="BgMask/BgMask/BgMask2/BgMask" index="0"]
+position = Vector2(510.00006, -2)
+texture = ExtResource("2_ae7j8")
+
+[node name="BgMask" type="Sprite2D" parent="BgMask/BgMask/BgMask2/BgMask/BgMask" index="0"]
+position = Vector2(510.00006, -2)
+texture = ExtResource("2_ae7j8")
+
+[node name="TextureRect3" type="TextureRect" parent="BgMask" index="1"]
+offset_left = -254.33334
+offset_top = -249.00006
+offset_right = 245.66666
+offset_bottom = 250.99994
+texture = ExtResource("3_q30kq")
+
+[node name="TextureRect2" type="TextureRect" parent="BgMask/TextureRect3" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.30200002
+anchor_bottom = 0.30200002
+offset_left = 998.6667
+offset_top = -151.66655
+offset_right = 1557.3333
+offset_bottom = 348.33344
+texture = ExtResource("4_rf8af")
+
+[node name="TextureRect3" type="TextureRect" parent="BgMask/TextureRect3" index="1"]
+layout_mode = 0
+offset_left = 3050.0
+offset_top = -4.333275
+offset_right = 3550.0
+offset_bottom = 495.66672
+texture = ExtResource("3_q30kq")
+
+[node name="TextureRect" type="TextureRect" parent="BgMask/TextureRect3" index="2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.30200002
+anchor_bottom = 0.30200002
+offset_left = 499.33334
+offset_top = -151.33328
+offset_right = 1058.0
+offset_bottom = 348.66675
+texture = ExtResource("4_rf8af")
+
+[node name="TextureRect4" type="TextureRect" parent="BgMask/TextureRect3" index="3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.30200002
+anchor_bottom = 0.30200002
+offset_left = 1498.0
+offset_top = -151.9998
+offset_right = 2056.6665
+offset_bottom = 348.00018
+texture = ExtResource("4_rf8af")
+
+[node name="TextureRect5" type="TextureRect" parent="BgMask/TextureRect3" index="4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.30200002
+anchor_bottom = 0.30200002
+offset_left = 1997.3334
+offset_top = -152.33305
+offset_right = 2556.0
+offset_bottom = 347.66693
+texture = ExtResource("4_rf8af")
+
+[node name="TextureRect6" type="TextureRect" parent="BgMask/TextureRect3" index="5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.30200002
+anchor_bottom = 0.30200002
+offset_left = 2496.6667
+offset_top = -152.6663
+offset_right = 3055.3335
+offset_bottom = 347.33368
+texture = ExtResource("4_rf8af")
+
+[node name="first-trees-line" parent="." index="2"]
+offset_left = -786.3334
+offset_top = -740.3334
+offset_right = -144.66669
+offset_bottom = -380.66672
+
+[node name="second-trees-line" parent="." index="3"]
+visible = false
+
+[node name="last-trees-line" parent="." index="4"]
+visible = false
+
+[node name="level-platform" parent="." index="5"]
+visible = false
+
+[node name="player" parent="." index="6"]
+visible = false
+
+[node name="enemies" parent="." index="7"]
+visible = false
+
+[node name="tree-frontend" parent="." index="8"]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="." index="9"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect2" type="TextureRect" parent="." index="10"]
+offset_left = 1.0
+offset_top = -140.0
+offset_right = 501.0
+offset_bottom = 360.0
+texture = ExtResource("5_wedvm")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect2" index="0"]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = -1.0
+offset_right = 1500.0
+offset_bottom = 499.0
+texture = ExtResource("5_wedvm")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect2/TextureRect2" index="0"]
+layout_mode = 0
+offset_left = 999.3333
+offset_top = -1.0
+offset_right = 1499.3333
+offset_bottom = 499.0
+texture = ExtResource("5_wedvm")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect2/TextureRect2/TextureRect2" index="0"]
+layout_mode = 0
+offset_left = 998.6666
+offset_right = 1498.6666
+offset_bottom = 500.0
+texture = ExtResource("5_wedvm")
+
+[node name="TextureRect3" type="TextureRect" parent="." index="11"]
+offset_left = 501.0
+offset_top = -141.33334
+offset_right = 1001.0
+offset_bottom = 358.66666
+texture = ExtResource("6_6qxci")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect3" index="0"]
+layout_mode = 0
+offset_left = 999.0
+offset_top = -0.33332312
+offset_right = 1499.0
+offset_bottom = 499.6667
+texture = ExtResource("6_6qxci")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect3/TextureRect3" index="0"]
+layout_mode = 0
+offset_left = 999.0
+offset_top = -0.33332312
+offset_right = 1499.0
+offset_bottom = 499.6667
+texture = ExtResource("6_6qxci")
+
+[node name="TextureRect4" type="TextureRect" parent="TextureRect3/TextureRect3" index="1"]
+layout_mode = 0
+offset_left = 999.0
+offset_top = -0.33332312
+offset_right = 1499.0
+offset_bottom = 499.6667
+texture = ExtResource("6_6qxci")
