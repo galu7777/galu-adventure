@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dackwckmfmmnp"]
+
+[ext_resource type="Script" uid="uid://dsisdvexx0dbj" path="res://scripts/controls.gd" id="1_i2gav"]
+[ext_resource type="Texture2D" uid="uid://c1kyft32w4t2u" path="res://assets/button_left.png" id="2_5tddo"]
+[ext_resource type="Texture2D" uid="uid://dj4taj74pyw4u" path="res://assets/button_right.png" id="3_cywyo"]
+[ext_resource type="Texture2D" uid="uid://dlm6d48ja0x48" path="res://assets/button_space.png" id="4_ihl6s"]
+
+[node name="Controls" type="CanvasLayer"]
+script = ExtResource("1_i2gav")
+
+[node name="left" type="TouchScreenButton" parent="."]
+self_modulate = Color(1, 1, 1, 0.59607846)
+position = Vector2(136, 928)
+scale = Vector2(0.48659003, 0.46496823)
+texture_normal = ExtResource("2_5tddo")
+action = "izquierda"
+
+[node name="right" type="TouchScreenButton" parent="."]
+self_modulate = Color(1, 1, 1, 0.59607846)
+position = Vector2(404, 925.00006)
+scale = Vector2(0.5269232, 0.4839743)
+texture_normal = ExtResource("3_cywyo")
+action = "derecha"
+
+[node name="jump" type="TouchScreenButton" parent="."]
+self_modulate = Color(1, 1, 1, 0.59607846)
+position = Vector2(1846.9999, 915)
+scale = Vector2(0.6984121, 0.51379323)
+texture_normal = ExtResource("4_ihl6s")
+action = "salto"
+
+[connection signal="pressed" from="left" to="." method="_on_left_pressed"]
+[connection signal="released" from="left" to="." method="_on_left_released"]
+[connection signal="pressed" from="right" to="." method="_on_right_pressed"]
+[connection signal="released" from="right" to="." method="_on_right_released"]
+[connection signal="pressed" from="jump" to="." method="_on_jump_pressed"]
+[connection signal="released" from="jump" to="." method="_on_jump_released"]
